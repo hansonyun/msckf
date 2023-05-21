@@ -33,7 +33,7 @@ def DownloadYoutube(video_url, save_dir, file_name):
     print("视频下载完成")
 
 
-def CombineVideoSubtitles(self, videoFile, srtFile, outputFile):
+def CombineVideoSubtitles(videoFile, srtFile, outputFile):
     if not (isfile(videoFile) and videoFile.endswith(
         ('.avi', '.mp4')) and isfile(srtFile) and srtFile.endswith('.srt')):
         print('视频仅支持avi以及mp4,字幕仅支持srt格式')
@@ -49,6 +49,6 @@ if __name__ == '__main__':
     DownloadYoutube('https://www.youtube.com/watch?v=bHcJCp2Fyxs',
                     '/home/huangshuai/Downloads/')
 
-    CombineVideoSubtitles('/home/huangshuai/Downloads/1.mp4',
-                          '/home/huangshuai/Downloads/1.srt',
-                          '/home/huangshuai/Downloads/1_out.mp4')
+    CombineVideoSubtitles('/home/huangshuai/Downloads/2.mp4',
+                          '/home/huangshuai/Downloads/2.srt',
+                          '/home/huangshuai/Downloads/2_out.mp4')
