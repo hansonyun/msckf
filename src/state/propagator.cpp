@@ -142,8 +142,6 @@ void Propagator::StatePropagate(const std::vector<ImuData> &imu_vec, State &stat
     Phi_ell.block(3, 12, 3, 3) = Phi_ell.block(6, 12, 3, 3) * dt * 0.5;
     Phi_sum = Phi_ell * Phi_sum;
 
-    AWARN << "Phi is \n" << Phi_ell;
-
     // 更新Q_sum, 参考论文推导 4.4.6节
     Eigen::Matrix<double, State::kDim, 12> G_ell;
     G_ell.setZero();

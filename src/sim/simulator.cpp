@@ -49,10 +49,6 @@ Simulator::Simulator(const Params &params_) {
 
   //===============================================================
   // Load the seeds for the random number generators
-  gen_state_init = std::mt19937(params->sim_params.sim_seed_state_init);
-  gen_state_init.seed(params->sim_params.sim_seed_state_init);
-  gen_state_perturb = std::mt19937(params->sim_params.sim_seed_perturb);
-  gen_state_perturb.seed(params->sim_params.sim_seed_perturb);
   gen_meas_imu = std::mt19937(params->sim_params.sim_seed_measurements);
   gen_meas_imu.seed(params->sim_params.sim_seed_measurements);
 

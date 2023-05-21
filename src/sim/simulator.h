@@ -79,12 +79,6 @@ protected:
   /// Mersenne twister PRNG for measurements (IMU)
   std::mt19937 gen_meas_imu;
 
-  /// Mersenne twister PRNG for state initialization
-  std::mt19937 gen_state_init;
-
-  /// Mersenne twister PRNG for state perturbations
-  std::mt19937 gen_state_perturb;
-
   /// If our simulation is running
   bool is_running;
 
